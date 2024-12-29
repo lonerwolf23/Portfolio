@@ -1,0 +1,225 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  background: linear-gradient(to bottom right, #4facfe, #00f2fe);  /* Blue to cyan gradient */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+  background: #444;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Navigation Links */
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;  /* Center align the links */
+}
+
+header ul li {
+  display: inline;
+  margin: 0 15px;  /* Increase the space between links */
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;  /* Slightly larger font for visibility */
+  font-weight: bold;  /* Bold for prominence */
+  position: relative;  /* For the underline effect */
+  padding: 5px 0;  /* Add some vertical padding */
+}
+
+header a:hover {
+  color: #007BFF;  /* Change color to blue when hovered */
+}
+
+/* Hover effect: Adding an underline */
+header a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007BFF;
+  transition: width 0.3s ease;
+}
+
+header a:hover::after {
+  width: 100%;  /* Underline effect on hover */
+}
+
+/* Active Link Styling (Optional: Highlighting the active section) */
+header a.active {
+  color: #FFD700;  /* Highlight active link with a gold color */
+  text-decoration: underline;  /* Underline active link */
+}
+
+/* Hero Section */
+.hero {
+  background: #f4f4f4;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+  margin-top: 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero .btn {
+  background: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* About Section */
+section {
+  padding: 2rem;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* About Me Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.profile-image {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text ul li {
+  margin: 0.5rem 0;
+}
+
+/* Portfolio Section */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.project {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contact Section */
+.contact-details,
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+}
+
+.contact-details li,
+.social-links li {
+  margin: 0.5rem;
+}
+
+.contact-details a,
+.social-links a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact-details a:hover,
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #444;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .about-container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .profile-image {
+    margin-right: 20px;
+  }
+}
