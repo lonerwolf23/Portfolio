@@ -168,7 +168,7 @@ section h2 {
   height: auto;
 }
 
-/* Contact Section */
+/* General Contact Section Styles */
 .contact-details,
 .social-links {
   list-style: none;
@@ -181,6 +181,7 @@ section h2 {
 .contact-details li,
 .social-links li {
   margin: 0.5rem;
+  display: inline-block;
 }
 
 .contact-details a,
@@ -193,6 +194,22 @@ section h2 {
 .social-links a:hover {
   text-decoration: underline;
 }
+
+/* Mobile-Friendly Styles */
+@media (max-width: 768px) {
+  .contact-details,
+  .social-links {
+    flex-wrap: wrap; /* Allow the items to wrap if necessary on smaller screens */
+    justify-content: space-evenly;  /* Space the items evenly */
+  }
+
+  .contact-details li,
+  .social-links li {
+    margin: 0.5rem;
+    display: inline-block;  /* Ensure links are visible */
+  }
+}
+
 
 /* Footer */
 footer {
